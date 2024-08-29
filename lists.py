@@ -1,5 +1,8 @@
 def main():
     midterm = [90, 80, 100, 75, 82, 80]
+    print(midterm[2:4])
+    print(midterm[3:])
+    print(midterm[:2])
     print(midterm[1])
     for m in midterm:
         print(m)
