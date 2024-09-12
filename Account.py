@@ -12,6 +12,18 @@ class Account():
             return None
         self.balance += amountToDeposit
         return self.balance
+    def withdraw(self, amountToWithdraw, password):
+        if password != self.password:
+            print("Incorrect password")
+            return None
+        if amountToWithdraw < 0:
+            print("You cannot withdraw a negative amount")
+            return None
+        if amountToWithdraw > self.balance:
+            print("You cannot withdraw more than your balance")
+            return None
+        self.balance -= amountToWithdraw
+        return self.balance
     
     def show(self):
         print(self.number)
@@ -19,7 +31,7 @@ class Account():
 def main():
     alice = Account("0001", 10000.50, "bsu")
     bob = Account("0002", 100, "iu")
-    alice.deposit(-100, "bsu")
+    bob.withdraw(50, "iu")
     bob.show()
     alice.show()
 main()
