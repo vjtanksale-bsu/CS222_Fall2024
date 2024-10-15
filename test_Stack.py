@@ -11,6 +11,9 @@ class TestStack(unittest.TestCase):
         self.stack.push(1)
         self.stack.push(2)
         self.assertEqual(self.stack.pop(), 2)
+    def test_popEmpty(self):
+        with self.assertRaises(IndexError):
+            self.stack.pop()
     def test_isEmpty(self):
         self.assertTrue(self.stack.isEmpty())
 if __name__ == '__main__':
