@@ -1,10 +1,10 @@
 def main():
     midterm = [70, 92, 100]
     try:
-        print(midterm[2])
+        print(midterm[3])
     except:
         print("Something went wrong")
-    x = 1
+    x = 0
     try:
         z = 10 / x
     except ZeroDivisionError:
